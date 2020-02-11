@@ -14,28 +14,43 @@
 <body>
 
  <h1>Listenansicht der Notes</h1>
-<form action="#" th:action="@{/review/upsert}" th:object="${review}" method="post">
-    <label for="rating">Rating</label>
-    <input th:field="*{rating}" required type="text">
-    <br><br>
-    <label for="text">Text</label>
-    <input th:field="*{text}" required type="text">
-    <br><br>
-    <label for="book">Book</label>
-    <select th:field="*{book}">
-	  <option value="">Nicht ausgewählt</option>
-	  <option th:each="book : ${allBooks}" th:value="${book.id}" th:text="${book.title}"></option>	  
-	</select>
-	<br><br>
-	<label for="customer">Customer</label>
-    <select th:field="*{customer}">
-	  <option value="">Nicht ausgewählt</option>
-	  <option th:each="customer : ${allCustomers}" th:value="${customer.id}" th:text="${customer.firstName + ' ' + customer.lastName}"></option>	  
-	</select>
-    <br><br> 
-    <input type="submit" value="Save">
-    <input type="reset" value="Reset" />
-</form>
+
+<div id = "main">
+    <form action="#" th:action="@{/review/upsert}" th:object="${review}" method="post">
+
+
+        <label for="rating">Notiz 1</label>
+        <input th:field="Thema1" required type="text" id="name1" value = "Name Notiz 1">
+
+
+        <label for="rating">1</label>
+        <input th:field="*{rating}" required type="text">
+
+
+
+        <br><br>
+        <label for="text">Notiz 2</label>
+        <input th:field="*{text}" required type="text">
+        <label for="rating">2</label>
+        <input th:field="*{rating}" required type="text">
+
+            <br><br>
+        <label for="rating">Notiz 3</label>
+        <input th:field="*{rating}" required type="text">
+        <label for="rating">3</label>
+        <input th:field="*{rating}" required type="text">
+            <br><br>
+
+        <label for="text">Notiz 4</label>
+        <input th:field="*{text}" required type="text">
+        <label for="rating">4</label>
+        <input th:field="*{rating}" required type="text">
+        <br><br>
+        
+        <input type="submit" value="Save">
+        <input type="reset" value="Reset" />
+    </form>
+</div>
 </body>
 
 </html>
