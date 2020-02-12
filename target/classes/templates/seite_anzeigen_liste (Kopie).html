@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset=UTF-8>
+
+<head>
+
+  <title>
+    Take a Note
+  </title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+ <h1>Listenansicht der Notes</h1>
+
+<div id = "main">
+    <form action="#" th:action="@{/review/upsert}" th:object="${review}" method="post">
+
+
+        <label for="rating">Notiz 1</label>
+        <input th:field="Thema1" required type="text" id="name1" value = "Name Notiz 1">
+
+
+        <label for="rating">1</label>
+        <input th:field="*{rating}" required type="text" id="content1" value = "Content der Notiz 1">
+
+
+
+        <br><br>
+        <label for="text">Notiz 2</label>
+        <input th:field="*{text}" required type="text">
+        <label for="rating">2</label>
+        <input th:field="*{rating}" required type="text">
+
+            <br><br>
+        <label for="rating">Notiz 3</label>
+        <input th:field="*{rating}" required type="text">
+        <label for="rating">3</label>
+        <input th:field="*{rating}" required type="text">
+            <br><br>
+
+        <label for="text">Notiz 4</label>
+        <input th:field="*{text}" required type="text">
+        <label for="rating">4</label>
+        <input th:field="*{rating}" required type="text">
+        <br><br>
+      
+    </form>
+</div>
+</body>
+
+</html>
