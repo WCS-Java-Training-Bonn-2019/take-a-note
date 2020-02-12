@@ -1,88 +1,86 @@
 <!DOCTYPE html>
+<html>
 <meta charset=UTF-8>
 
 <head>
 
- <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-  	<title>
-    Take a Note
-  	</title>
- 
+<title>Take a Note</title>
+
 </head>
 
 
 
 <body>
 
- <header>
- <h1>Listenansicht der Notes</h1> 
- </header>
-  
+	<header>
+		<h1>Listenansicht der Notes</h1>
+	</header>
 
 
-<div id = "main">
-    
-<form action="#" th:action="@{/review/upsert}" th:object="${review}" method="post">
+
+	<div id="main">
+
+		<form action="#" th:action="@{/review/upsert}" th:object="${review}"
+			method="post">
 
 
-<section>
+			<section>
 
-<h2>Hier sind Ihre Notizen</h2>
+				<h2>Hier sind Ihre Notizen</h2>
 
-<table border="1">
-<tr>
-    <th>Name der Notiz</th>
-    <th>Details der Notizen</th>
-    <th>Link zur Detailansicht</th>
-    </tr>
+				<table border="1">
+					<tr>
+						<th>Name der Notiz</th>
+						<th>Details der Notizen</th>
+						<th>Link zur Detailansicht</th>
+					</tr>
 
-<tr th:each="author : ${authors}">
-    <td th:text="${notes.name}">erste Notiz</td>    
-    <td th:text="${notes.details}">erste Notiz Details xxxxxxxxxxxxx</td>
-    <td>
-    <a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-       
-<tr th:each="author : ${authors}">
-    <td th:text="${notes.name}">zweite Notiz</td>    
-    <td th:text="${notes.details}">zweite Notiz Details xxxxxxxxxxxx</td>
-    <td>       
-  	<a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-  	
-  	
-<tr th:each="author : ${authors}">
-    <td th:text="${notes.name}">dritte Notiz</td>    
-    <td th:text="${notes.details}">dritte Notiz Details xxxxxxxxxxxxxxx</td>
-    <td>
-    <a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-       
-<tr th:each="author : ${authors}">
-    <td th:text="${notes.name}">vierte Notiz</td>    
-    <td th:text="${notes.details}">vierte Notiz Details xxxxxxxxxxxxxx</td>
-    <td>       
-  	<a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
- 
-<tr th:each="author : ${authors}">
-    <td th:text="${notes.name}">fünfte Notiz</td>    
-    <td th:text="${notes.details}">fünfte Notiz Details xxxxxxxxxxxxxxx</td>
-    <td>
-    <a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-       
-<tr th:each="author : ${authors}">
-    <td th:text="${notes.name}">sechste Notiz</td>    
-    <td th:text="${notes.details}">sechste Notiz Details xxxxxxxxxxxxxx</td>
-    <td>       
-  	<a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-</tr>
-</table>
-</section>
+					<tr th:each="author : ${authors}">
+						<td th:text="${notes.name}">erste Notiz</td>
+						<td th:text="${notes.details}">erste Notiz Details
+							xxxxxxxxxxxxx</td>
+							
+						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
+						
+						
+						
+					<tr th:each="author : ${authors}">
+						<td th:text="${notes.name}">zweite Notiz</td>
+						<td th:text="${notes.details}">zweite Notiz Details
+							xxxxxxxxxxxx</td>
+						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
+					<tr th:each="author : ${authors}">
+						<td th:text="${notes.name}">dritte Notiz</td>
+						<td th:text="${notes.details}">dritte Notiz Details
+							xxxxxxxxxxxxxxx</td>
+						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
+					<tr th:each="author : ${authors}">
+						<td th:text="${notes.name}">vierte Notiz</td>
+						<td th:text="${notes.details}">vierte Notiz Details
+							xxxxxxxxxxxxxx</td>
+						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
+					<tr th:each="author : ${authors}">
+						<td th:text="${notes.name}">fünfte Notiz</td>
+						<td th:text="${notes.details}">fünfte Notiz Details
+							xxxxxxxxxxxxxxx</td>
+						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
+					<tr th:each="author : ${authors}">
+						<td th:text="${notes.name}">sechste Notiz</td>
+						<td th:text="${notes.details}">sechste Notiz Details
+							xxxxxxxxxxxxxx</td>
+						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
+					</tr>
+				</table>
+			</section>
 
-</form>
-</div>
+		</form>
+	</div>
 </body>
 
 <footer>
- <h3>Footer der Notes und natürlich das Copyright</h3>
+	<h3>Footer der Notes und natürlich das Copyright</h3>
 </footer>
 
 </html>
