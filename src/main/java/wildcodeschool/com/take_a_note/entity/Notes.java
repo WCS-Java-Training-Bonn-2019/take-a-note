@@ -16,12 +16,12 @@ public class Notes {
     private String notizentext;
 
     // Konstruktor für ein Notizen-Objekt 
-    public Notes(Long notizen_id, Long user_id, String notizenname, String notizentext) {
-        this.notizen_id = notizen_id;
-        this.user_id = user_id;
-        this.notizenname = notizenname;
-        this.notizentext = notizentext;
-    }
+//    public Notes(Long notizen_id, Long user_id, String notizenname, String notizentext) {
+//        this.notizen_id = notizen_id;
+//        this.user_id = user_id;
+//        this.notizenname = notizenname;
+//        this.notizentext = notizentext;
+//    }
     
     public Long getNotizen_id() {
 		return notizen_id;
