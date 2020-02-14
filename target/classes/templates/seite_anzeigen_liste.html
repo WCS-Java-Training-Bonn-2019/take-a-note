@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <meta charset=UTF-8>
 
 <head>
@@ -37,41 +37,11 @@
 						<th>Link zur Detailansicht</th>
 					</tr>
 
-					<tr th:each="author : ${authors}">
-						<td th:text="${notes.name}">erste Notiz</td>
-						<td th:text="${notes.details}">erste Notiz Details
-							xxxxxxxxxxxxx</td>
-							
-						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-						
-						
-						
-					<tr th:each="author : ${authors}">
-						<td th:text="${notes.name}">zweite Notiz</td>
-						<td th:text="${notes.details}">zweite Notiz Details
-							xxxxxxxxxxxx</td>
-						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-					<tr th:each="author : ${authors}">
-						<td th:text="${notes.name}">dritte Notiz</td>
-						<td th:text="${notes.details}">dritte Notiz Details
-							xxxxxxxxxxxxxxx</td>
-						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-					<tr th:each="author : ${authors}">
-						<td th:text="${notes.name}">vierte Notiz</td>
-						<td th:text="${notes.details}">vierte Notiz Details
-							xxxxxxxxxxxxxx</td>
-						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-					<tr th:each="author : ${authors}">
-						<td th:text="${notes.name}">fünfte Notiz</td>
-						<td th:text="${notes.details}">fünfte Notiz Details
-							xxxxxxxxxxxxxxx</td>
-						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-					<tr th:each="author : ${authors}">
-						<td th:text="${notes.name}">sechste Notiz</td>
-						<td th:text="${notes.details}">sechste Notiz Details
-							xxxxxxxxxxxxxx</td>
-						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-					</tr>
+					<tr th:each="note : ${notes}">
+						<td th:text="${note.notizenname}">erste Notiz</td>
+						<td th:text="${note.notizentext}">erste Notiz Details</td>
+						<td><a th:href="@{'/editieren'}">Notiz</a>
+
 				</table>
 			</section>
 
@@ -80,7 +50,7 @@
 </body>
 
 <footer>
-	<h3>Footer der Notes und natürlich das Copyright</h3>
+	<h3>Copyright<em>&copy;</em> Frank, Claus und Frank 2020 </h3>
 </footer>
 
 </html>
