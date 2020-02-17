@@ -15,7 +15,7 @@
 <body>
 
 	<header>
-		<h1>Listenansicht der Notes</h1>
+		<h1>Detailansicht der Notes</h1>
 	</header>
 
 
@@ -34,17 +34,15 @@
 					<tr>
 						<th>Name der Notiz</th>
 						<th>Details der Notizen</th>
-							<th>Notizen id</th>
-						<th>Link zur Detailansicht</th>
+						<th>Link zum Editieren der Notes</th>
 					</tr>
 
 					<tr th:each="note : ${notes}">
 						<td th:text="${note.notizenname}">Notiz</td>
-						<td th:text="${note.notizen_id}">Notiz</td>
 						<td th:text="${note.notizentext}">Notiz Details</td>
+							
+						<td><a th:href="@{'/editieren'}">Link</a>
 						
-						<td><a th:href="@{'/details' }">Notiz</a>
-
 					</tr>
 				</table>
 			</section>
@@ -54,7 +52,7 @@
 </body>
 
 <footer>
-	<h3>Copyright<em>&copy;</em> Frank, Claus und Frank 2020 </h3>
+	<h3>Footer der Notes und natürlich das Copyright</h3>
 </footer>
 
 </html>

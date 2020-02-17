@@ -35,7 +35,7 @@ return "seite_anzeigen_liste";
 
 	public String indexdetails() {
 
-		return "detailansicht";
+		return "details";
 	}
 
 	@GetMapping("/editieren")
