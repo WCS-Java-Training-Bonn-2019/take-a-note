@@ -34,14 +34,18 @@
 					<tr>
 						<th>Name der Notiz</th>
 						<th>Details der Notizen</th>
+							<th>Notizen id</th>
 						<th>Link zur Detailansicht</th>
 					</tr>
 
 					<tr th:each="note : ${notes}">
-						<td th:text="${note.notizenname}">erste Notiz</td>
-						<td th:text="${note.notizentext}">erste Notiz Details</td>
-						<td><a th:href="@{'/editieren'}">Notiz</a>
+						<td th:text="${note.notizenname}">Notiz</td>
+						<td th:text="${note.notizen_id}">Notiz</td>
+						<td th:text="${note.notizentext}">Notiz Details</td>
+						
+						<td><a th:href="@{'/details' }">Notiz</a>
 
+					</tr>
 				</table>
 			</section>
 

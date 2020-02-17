@@ -24,7 +24,7 @@ public class Notes {
 //    }
     
     public Long getNotizen_id() {
-		return notizen_id;
+  		return notizen_id;
 	}
 	public void setNotizen_id(Long notizen_id) {
 		this.notizen_id = notizen_id;
