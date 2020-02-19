@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import wildcodeschool.com.take_a_note.repository.NotesRepository;
 
@@ -20,8 +21,8 @@ public class NotesController {
 
 	public String index(Model model) {
 		model.addAttribute("notes", notesRepository.findAll());
-System.out.println(notesRepository.findAll());
-return "seite_anzeigen_liste";
+
+		return "seite_anzeigen_liste";
 	}
 
 	@GetMapping("/anlegen")
@@ -31,10 +32,14 @@ return "seite_anzeigen_liste";
 		return "note_anlegen";
 	}
 
-	@GetMapping("/details")
+	@GetMapping("/details/{notizenId}")
 
-	public String indexdetails() {
+	public String indexdetails(@PathVariable Long notizenId, Model model) {
+		
+		model.addAttribute("note", notesRepository.findById(notizenId));      //Optional[wildcodeschool.com.take_a_note.entity.Notes@247bba1a]
 
+		System.out.println(notesRepository.findById(notizenId));
+		
 		return "details";
 	}
 

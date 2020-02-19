@@ -43,7 +43,7 @@
 						<td th:text="${note.notizen_id}">Notiz</td>
 						<td th:text="${note.notizentext}">Notiz Details</td>
 						
-						<td><a th:href="@{'/details' }">Notiz</a>
+						<td><a th:href="@{'/details/' + ${note.notizen_id}}">Notiz</a>
 
 					</tr>
 				</table>
