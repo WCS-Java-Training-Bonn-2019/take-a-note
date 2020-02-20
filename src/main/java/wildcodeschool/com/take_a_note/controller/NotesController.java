@@ -1,11 +1,14 @@
 package wildcodeschool.com.take_a_note.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import wildcodeschool.com.take_a_note.entity.Notes;
 import wildcodeschool.com.take_a_note.repository.NotesRepository;
 
 
@@ -36,9 +39,10 @@ public class NotesController {
 
 	public String indexdetails(@PathVariable Long notizenId, Model model) {
 		
-		model.addAttribute("note", notesRepository.findById(notizenId));      //Optional[wildcodeschool.com.take_a_note.entity.Notes@247bba1a]
+		
+		model.addAttribute("note", notesRepository.findById(notizenId).get());      //Optional[wildcodeschool.com.take_a_note.entity.Notes@247bba1a]
 
-		System.out.println(notesRepository.findById(notizenId));
+	
 		
 		return "details";
 	}
