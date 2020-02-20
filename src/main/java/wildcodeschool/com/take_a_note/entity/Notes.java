@@ -26,10 +26,11 @@ public class Notes {
     public Long getNotizen_id() {
   		return notizen_id;
 	}
+    
 	public void setNotizen_id(Long notizen_id) {
+// 		System.out.println("HALLO" + notizen_id); 
 		this.notizen_id = notizen_id;
 	}
-
 
 
 	public void setNotizenname(String notizenname) {
@@ -39,7 +40,6 @@ public class Notes {
     public String getNotizenname() {
         return notizenname;
     }
-
 	
 	public void setUser_id(Long user_id) {
 		this.user_id = user_id;

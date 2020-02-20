@@ -22,7 +22,7 @@
 
 	<div id="main">
 
-		<form action="#" th:action="@{/review/upsert}" th:object="${review}"
+		<form action="#" th:action="@{/review/upsert}" th:object="${note}"
 			method="post">
 
 
@@ -32,16 +32,18 @@
 
 				<table border="1">
 					<tr>
+						<th>Notizen-id</th>
 						<th>Name der Notiz</th>
 						<th>Details der Notizen</th>
 						<th>Link zum Editieren der Notes</th>
 					</tr>
 
-					<tr th:each="note : ${notes}">
-						<td th:text="${note.notizenname}">Notiz</td>
-						<td th:text="${note.notizentext}">Notiz Details</td>
+ 					<tr>
+ 						<td th:text="*{notizen_id}">Notiz</td>
+    					<td th:text="*{notizenname}">Notiz</td>
+						<td th:text="*{notizentext}">Notiz Details</td>
 							
-						<td><a th:href="@{'/editieren'}">Link</a>
+				    	<td><a th:href="@{'/editieren'}">Link</a> </td>
 						
 					</tr>
 				</table>
