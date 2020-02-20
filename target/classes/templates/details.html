@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <meta charset=UTF-8>
 
 <head>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 
 <title>Take a Note</title>
 
@@ -28,7 +28,7 @@
 
 			<section>
 
-				<h2>Hier sind Ihre Notizen</h2>
+				<h2>Ihre Notiz in der Detailansicht</h2>
 
 				<table border="1">
 					<tr>
@@ -43,7 +43,7 @@
     					<td th:text="*{notizenname}">Notiz</td>
 						<td th:text="*{notizentext}">Notiz Details</td>
 							
-				    	<td><a th:href="@{'/editieren'}">Link</a> </td>
+				    	<td><a th:href="@{'/editieren/' + ${note.notizen_id}}">Link</a> </td>
 						
 					</tr>
 				</table>

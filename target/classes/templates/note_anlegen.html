@@ -4,9 +4,24 @@
 
 <head>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 
 <title>Take a Note</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script th:src="@{/webjars/jquery/3.4.1/jquery.slim.min.js}" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script th:src="@{/webjars/popper.js/1.14.3/umd/popper.min.js}"
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script th:src="@{/webjars/bootstrap/4.4.1/js/bootstrap.min.js}"
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -15,64 +30,37 @@
 <body>
 
 	<header>
-		<h1>Listenansich der Notes</h1>
+		<h1>Editieren der Notiz</h1>
 	</header>
 
 
 
 	<div id="main">
 
-		<form action="#" th:action="@{/review/upsert}" th:object="${review}"
+		<form action="#" th:action="@{/note/upsert}"
 			method="post">
 
 
 			<section>
 
-				<h2>Hier sind Ihre Notizen</h2>
+				<h2>Ihre neue Notes-Notiz</h2>
 
 				<table border="1">
 					<tr>
 						<th>Name der Notiz</th>
-						<th>Details der Notizen</th>
-						<th>Link zur Detailansicht</th>
+						<th>Inhalt der Notiz</th>
 					</tr>
 
-					<tr th:each="author : ${authors}">
-						<td th:text="${notes.name}">erste Notiz</td>
-						<td th:text="${notes.details}">erste Notiz Details
-							xxxxxxxxxxxxx</td>
-							
-						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-						
-						
-						
-					<tr th:each="author : ${authors}">
-						<td th:text="${notes.name}">zweite Notiz</td>
-						<td th:text="${notes.details}">zweite Notiz Details
-							xxxxxxxxxxxx</td>
-						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-					<tr th:each="author : ${authors}">
-						<td th:text="${notes.name}">dritte Notiz</td>
-						<td th:text="${notes.details}">dritte Notiz Details
-							xxxxxxxxxxxxxxx</td>
-						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-					<tr th:each="author : ${authors}">
-						<td th:text="${notes.name}">vierte Notiz</td>
-						<td th:text="${notes.details}">vierte Notiz Details
-							xxxxxxxxxxxxxx</td>
-						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-					<tr th:each="author : ${authors}">
-						<td th:text="${notes.name}">fünfte Notiz</td>
-						<td th:text="${notes.details}">fünfte Notiz Details
-							xxxxxxxxxxxxxxx</td>
-						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
-					<tr th:each="author : ${authors}">
-						<td th:text="${notes.name}">sechste Notiz</td>
-						<td th:text="${notes.details}">sechste Notiz Details
-							xxxxxxxxxxxxxx</td>
-						<td><a th:href="@{'/author/edit/' + ${notiz.id}}">Link</a>
+					<tr>
+ 						<td>
+ 							<input type="text" name="notizenname" required>
+ 						</td>
+ 						<td>
+ 							<input type="text" name="notizentext" required>
+ 						</td>
 					</tr>
 				</table>
+				<input type="submit" value="Save" >
 			</section>
 
 		</form>
@@ -80,7 +68,7 @@
 </body>
 
 <footer>
-	<h3>Footer der Notes und natürlich das Copyright</h3>
+	<h3>Copyright<em>&copy;</em> Frank, Claus und Frank 2020 </h3>
 </footer>
 
 </html>
