@@ -56,13 +56,14 @@
 					<tr>
  						<td>
  						<input th:field="*{notizen_id}" type="text" id="notizen_id" required></td>   		
- 						
  						<td>
  					    <input th:field="*{notizenname}" type="text" id="notizen_id" required></td>
  					    <td>
 						<input th:field="*{notizentext}" type="text" id="notizen_id" reqired></td>
 						<td>
-	  	  	            <input type="submit" value="speichern">
+						
+<!-- 					Button ruft die th:action aus Zeile 40 auf, d.h. das ganze Formular wird gespeichert -->
+	  	  	            <input type="submit" name="Speichern">
 
   						</td>
 	
