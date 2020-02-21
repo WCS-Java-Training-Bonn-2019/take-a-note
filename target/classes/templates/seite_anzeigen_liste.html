@@ -4,7 +4,7 @@
 
 <head>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 
 <title>Take a Note</title>
 
@@ -23,7 +23,6 @@
     crossorigin="anonymous"></script>
 
 </head>
-
 
 
 <body>
@@ -47,11 +46,11 @@
 				<table class="table table-hover table-striped">
   				<thead>
 					<tr>
-						<th>Notizen id</th>
+						<th>N-id</th>
 						<th>Name der Notiz</th>
-						<th>Details der Notizen</th>
+						<th>Inhalt der Notiz</th>
 				
-						<th>Link zur Detailansicht</th>
+						<th>Link Details</th>
 					</tr>
 				</thead>
 					
@@ -61,7 +60,7 @@
 						<td th:text="${note.notizenname}">Notiz</td>
 						<td th:text="${note.notizentext}">Notiz Details</td>
 						
-						<td><a th:href="@{'/details/' + ${note.notizen_id}}">Notiz</a>
+						<td><a th:href="@{'/details/' + ${note.notizen_id}}">Details</a>
 
 					</tr>
 				</table>
