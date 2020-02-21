@@ -36,7 +36,7 @@
 
 	<div id="main">
 
-		<form action="#" th:action="@{/review/upsert}" th:object="${note}"
+		<form action="#" th:action="@{/note/upsert}" th:object="${note}"
 			method="post">
 
 
@@ -56,9 +56,21 @@
  						<td th:text="*{notizen_id}">Notiz</td>
     					<td th:text="*{notizenname}">Notiz</td>
 						<td th:text="*{notizentext}">Notiz Details</td>
-							
-				    	<td><a th:href="@{'/editieren/' + ${note.notizen_id}}">Editieren</a> 
-						<input type="reset" value="löschen" >
+						
+						
+<!-- 					springt zur Seite editieren mit Berücksichtigung der jeweiligen id							 -->
+				    	<td><a th:href="@{'/editieren/' + ${note.notizen_id}}">editieren</a>
+				    	 
+				    	
+				    	 
+				    	<a th:href="loeschen">loeschen</a> 
+				    	
+				    	
+<!-- 				        <input type="submit" th:name="edit" th:value="bearbeiten" > -->
+<!-- 						<input type="submit" th:name="delete" th:value="löschen" > -->
+						
+						
+						
 						</td>
 					</tr>
 				</table>
