@@ -62,8 +62,22 @@
 						<input th:field="*{notizentext}" type="text" id="notizen_id" reqired></td>
 						<td>
 						
-<!-- 					Button ruft die th:action aus Zeile 40 auf, d.h. das ganze Formular wird gespeichert -->
-	  	  	            <input type="submit" name="Speichern">
+<!-- 					Button ruft die th:action aus Zeile 40 auf, d.h. das ganze Formular wird gespeichert 
+						<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
+						<input class="btn btn-primary" type="submit" value="Submit">
+						
+						<a class="btn btn-success" type="submit" name="Speichern">Weg hier</a>
+						
+							<div class="form-check">
+	  	  	         		<input type="submit" name="Speichern" >
+	  	  	           <label class="form-check-label" for="exampleCheck1">Check me out</label>
+	  	  	           </div>
+			-->			 
+						 
+
+					
+	  	  	            <button type="submit" class="btn btn-secondary btn-lg" name="Speichern">Submit</button>
+						
 
   						</td>
 	

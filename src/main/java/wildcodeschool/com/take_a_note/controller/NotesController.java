@@ -86,7 +86,7 @@ public class NotesController {
 
 //    	System.out.println(notizenId);
 
-		return "redirect:/editieren/" + note.getNotizen_id();
+		return "redirect:/notes";
 	}
 
 }

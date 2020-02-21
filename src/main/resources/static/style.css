@@ -63,3 +63,10 @@ footer  {
     justify-content: center;
     display: flex;
 }
+
+.verl   {
+	text-decoration: underline;
+	font-size: 30px;
+	color: yellow;
+		
+}
