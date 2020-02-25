@@ -8,19 +8,22 @@
 
 <title>Take a Note</title>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script th:src="@{/webjars/jquery/3.4.1/jquery.slim.min.js}" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script th:src="@{/webjars/popper.js/1.14.3/umd/popper.min.js}"
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script th:src="@{/webjars/bootstrap/4.4.1/js/bootstrap.min.js}"
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<script th:src="@{/webjars/jquery/3.4.1/jquery.slim.min.js}"
+	src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	crossorigin="anonymous"></script>
+<script th:src="@{/webjars/popper.js/1.14.3/umd/popper.min.js}"
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+<script th:src="@{/webjars/bootstrap/4.4.1/js/bootstrap.min.js}"
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	crossorigin="anonymous"></script>
 
 
 </head>
@@ -37,7 +40,7 @@
 
 	<div id="main">
 
-		<form action="#" th:action="@{/note/upsert}" th:object="${note}"
+		<form id="textfeld" action="#" th:action="@{/note/upsert}" th:object="${note}"
 			method="post">
 
 
@@ -45,44 +48,45 @@
 
 				<h3>Ihre Notiz zum Editieren</h3>
 
-				<table table table-hover table-striped>
+				<table>
+
 					<tr>
 						<th>N-id</th>
 						<th>Name der Notiz</th>
 						<th>Inhalt der Notiz</th>
-						<th>Speichern Notiz</th>
+						<th>speichern Notiz</th>
 					</tr>
 
 					<tr>
- 						<td>
- 						<input th:field="*{notizen_id}" type="text" id="notizen_id" required></td>   		
- 						<td>
- 					    <input th:field="*{notizenname}" type="text" id="notizen_id" required></td>
- 					    <td>
-						<input th:field="*{notizentext}" type="text" id="notizen_id" reqired></td>
+						<td><input th:field="*{notizen_id}" type="text"
+							id="notizen_id" required></td>
+							
+							
+						<td><input th:field="*{notizenname}" type="text"
+							id="notizen_name" required></td>
+							
+						<td>
+
+							
+							<textarea form ="textfeld" th:field="*{notizentext}" type="text"
+ 							id="notizen_text" required cols="35" wrap="soft"></textarea>
+							
+							</td>
 						<td>
 						
-<!-- 					Button ruft die th:action aus Zeile 40 auf, d.h. das ganze Formular wird gespeichert 
-						<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
-						<input class="btn btn-primary" type="submit" value="Submit">
-						
-						<a class="btn btn-success" type="submit" name="Speichern">Weg hier</a>
-						
-							<div class="form-check">
-	  	  	         		<input type="submit" name="Speichern" >
-	  	  	           <label class="form-check-label" for="exampleCheck1">Check me out</label>
-	  	  	           </div>
-			-->			 
-						 
-
-					
-	  	  	            <button type="submit" class="btn btn-secondary btn-lg" name="Speichern">Submit</button>
-						
-
-  						</td>
 	
+
+							<button type="submit" class="btn btn-secondary btn-lg"
+								name="Speichern">speichern</button>
+
+						</td>
+
 					</tr>
+					
 				</table>
+
+				<a class="Listenansicht" th:href="@{'/notes'}">zur Listenansicht</a>
+
 			</section>
 
 		</form>
@@ -90,7 +94,9 @@
 </body>
 
 <footer>
-	<h4>Copyright<em>&copy;</em> Frank, Claus und Frank 2020 </h4>
+	<h4>
+		Copyright<em>&copy;</em> Frank, Claus und Frank 2020
+	</h4>
 </footer>
 
 </html>
