@@ -36,19 +36,23 @@ table  {
 	 font-size: 28px; 
 }
 
+tr  {
+	vertical-align: top;
+}
+
 
 #notizen_id {
-    width: 100px;
+    width: 20%;
     align-content: start;
 }
 
 #notizen_name {
-    width: 300px;
+    width: 100%;
     position: fixed-top;
 }
 
 #notizen_text {
-    width: 800px;
+    width: 1000px;
     height: auto;
     
 }
@@ -76,9 +80,14 @@ form {
 
 }
 
+textarea:valid {
+   border: 1px solid grey;
+}
+   
 
 footer  {
 	background-color: grey;
+	
     opacity: 0.75; 
     text-align: center;
     justify-content: center;

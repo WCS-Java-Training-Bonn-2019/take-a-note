@@ -40,7 +40,7 @@
 
 	<div id="main">
 
-		<form action="#" th:action="@{/note/upsert}" method="post">
+		<form id="textfeld" action="#" th:action="@{/note/upsert}" method="post">
 
 
 			<section>
@@ -55,9 +55,20 @@
 
 					<tr>
 						<td><input type="text" name="notizenname" required></td>
-						<td><input type="text" name="notizentext" required></td>
+						
+						<td><input type="text" id="notizen_text" name="notizentext" required></td>
+						
 					</tr>
-				</table>
+					
+					<tr>
+					
+					
+					<output th:field="*{notizentext}" type="text" id="notizen_text" name="notizentext">
+					</output>
+					</tr>
+ 					
+ 					
+ 				</table>
 
 				<input type="submit" value="Save">
 

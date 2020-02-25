@@ -40,8 +40,8 @@
 
 	<div id="main">
 
-		<form id="textfeld" action="#" th:action="@{/note/upsert}" th:object="${note}"
-			method="post">
+		<form id="textfeld" action="#" th:action="@{/note/upsert}"
+			th:object="${note}" method="post">
 
 
 			<section>
@@ -51,30 +51,33 @@
 				<table>
 
 					<tr>
-						<th>N-id</th>
+
 						<th>Name der Notiz</th>
 						<th>Inhalt der Notiz</th>
 						<th>speichern Notiz</th>
 					</tr>
 
 					<tr>
-						<td><input th:field="*{notizen_id}" type="text"
-							id="notizen_id" required></td>
-							
-							
-						<td><input th:field="*{notizenname}" type="text"
-							id="notizen_name" required></td>
-							
+						<td>			
+							<input th:field="*{notizen_id}" type="text"
+							id="notizen_id" required> </output></td>
+
+
+						<!-- 						<td><input th:field="*{notizenname}" type="text" -->
+						<!-- 							id="notizen_name" required></td> -->
+
+						<td><textarea form="textfeld" th:field="*{notizenname}"
+								type="text" id="notizen_name" required cols="25" wrap="soft"></textarea>
+
+						</td>
+
+
+						<td><textarea form="textfeld" th:field="*{notizentext}"
+								type="text" id="notizen_text" required cols="35" wrap="soft"></textarea>
+
+						</td>
 						<td>
 
-							
-							<textarea form ="textfeld" th:field="*{notizentext}" type="text"
- 							id="notizen_text" required cols="35" wrap="soft"></textarea>
-							
-							</td>
-						<td>
-						
-	
 
 							<button type="submit" class="btn btn-secondary btn-lg"
 								name="Speichern">speichern</button>
@@ -82,7 +85,7 @@
 						</td>
 
 					</tr>
-					
+
 				</table>
 
 				<a class="Listenansicht" th:href="@{'/notes'}">zur Listenansicht</a>
