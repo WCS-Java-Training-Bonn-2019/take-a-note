@@ -36,6 +36,31 @@ table  {
 	 font-size: 28px; 
 }
 
+tr  {
+	vertical-align: top;
+}
+
+
+#notizen_id {
+    width: 20%;
+    align-content: start;
+}
+
+#notizen_name {
+    width: 100%;
+    position: fixed-top;
+}
+
+#notizen_text {
+    width: 1000px;
+    height: auto;
+    
+}
+
+
+
+
+
 #main   {    
 
     flex: 7;
@@ -55,16 +80,21 @@ form {
 
 }
 
+textarea:valid {
+   border: 1px solid grey;
+}
+   
 
 footer  {
 	background-color: grey;
+	
     opacity: 0.75; 
     text-align: center;
     justify-content: center;
     display: flex;
 }
 
-.verl   {
+.anlegen, .Listenansicht   {
 	text-decoration: underline;
 	font-size: 30px;
 	color: yellow;
