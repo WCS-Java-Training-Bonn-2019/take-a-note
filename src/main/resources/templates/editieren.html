@@ -33,7 +33,7 @@
 <body>
 
 	<header>
-		<h1>Editieren der Notiz</h1>
+		<h1>Take a Note</h1>
 	</header>
 
 
@@ -51,7 +51,7 @@
 				<table>
 
 					<tr>
-
+						<th>N-ID</th>
 						<th>Name der Notiz</th>
 						<th>Inhalt der Notiz</th>
 						<th>speichern Notiz</th>
@@ -60,20 +60,20 @@
 					<tr>
 						<td>			
 							<input th:field="*{notizen_id}" type="text"
-							id="notizen_id" required> </output></td>
+							id="notizen_id" required cols="20" wrap="soft"> </output></td>
 
 
 						<!-- 						<td><input th:field="*{notizenname}" type="text" -->
 						<!-- 							id="notizen_name" required></td> -->
 
 						<td><textarea form="textfeld" th:field="*{notizenname}"
-								type="text" id="notizen_name" required cols="25" wrap="soft"></textarea>
+								type="text" id="notizen_name" required cols="20" wrap="soft"></textarea>
 
 						</td>
 
 
 						<td><textarea form="textfeld" th:field="*{notizentext}"
-								type="text" id="notizen_text" required cols="35" wrap="soft"></textarea>
+								type="text" id="notizen_text" required cols="20" wrap="soft"></textarea>
 
 						</td>
 						<td>
@@ -85,10 +85,18 @@
 						</td>
 
 					</tr>
-
 				</table>
-
-				<a class="Listenansicht" th:href="@{'/notes'}">zur Listenansicht</a>
+					
+					
+						<a class="Listenansicht" th:href="@{'/notes'}">zur Listenansicht</a>
+						</br>
+					
+										
+						<a class="Note_anlegen" th:href="@{'/note_anlegen'}">Notiz anlegen</a>
+					
+					
+				
+	
 
 			</section>
 
