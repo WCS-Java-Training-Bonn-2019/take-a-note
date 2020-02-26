@@ -48,55 +48,53 @@
 
 				<h3>Ihre Notiz zum Editieren</h3>
 
+			<div id="textfeld">
+			
 				<table>
 
 					<tr>
+
 						<th>N-ID</th>
 						<th>Name der Notiz</th>
 						<th>Inhalt der Notiz</th>
 						<th>speichern Notiz</th>
 					</tr>
 
+
+						
 					<tr>
-						<td>			
-							<input th:field="*{notizen_id}" type="text"
-							id="notizen_id" required cols="20" wrap="soft"> </output></td>
-
-
-						<!-- 						<td><input th:field="*{notizenname}" type="text" -->
-						<!-- 							id="notizen_name" required></td> -->
+						
+						<input id="*{notizen_id}" th:field="*{notizen_id}" type="hidden">	
+						<td th:text="*{notizen_id}">	
+							
+						</td>
 
 						<td><textarea form="textfeld" th:field="*{notizenname}"
 								type="text" id="notizen_name" required cols="20" wrap="soft"></textarea>
-
 						</td>
 
 
 						<td><textarea form="textfeld" th:field="*{notizentext}"
 								type="text" id="notizen_text" required cols="20" wrap="soft"></textarea>
-
 						</td>
+
 						<td>
-
-
 							<button type="submit" class="btn btn-secondary btn-lg"
 								name="Speichern">speichern</button>
-
 						</td>
 
 					</tr>
 				</table>
-					
-					
-						<a class="Listenansicht" th:href="@{'/notes'}">zur Listenansicht</a>
-						</br>
-					
-										
-						<a class="Note_anlegen" th:href="@{'/note_anlegen'}">Notiz anlegen</a>
-					
-					
 				
-	
+			</div>
+			
+
+			<a class="Listenansicht" th:href="@{'/notes'}">zur Listenansicht</a>
+			</br> <a class="Note_anlegen" th:href="@{'/note_anlegen'}">Notiz anlegen</a>
+
+
+
+
 
 			</section>
 
