@@ -1,0 +1,22 @@
+
+to keep the app "take a note" running make sure that the follwing steps have been done successfully:  
+
+
+1. start your sql-engine by login with your personal sql-account data:
+
+	- mysql -u root -p 
+
+	- enter your password for your mysql- account
+
+
+
+2. type in the following commands on your bash:
+
+	-	CREATE DATABASE IF NOT EXISTS `spring_jpa_notes`;
+
+	-	CREATE USER IF NOT EXISTS 'admin'@'localhost' IDENTIFIED BY 'Admin!?1';
+	
+	-	GRANT ALL PRIVILEGES ON spring_jpa_notes.* TO 'admin'@'localhost';
+
+
+enjoy the app "take a note" !
