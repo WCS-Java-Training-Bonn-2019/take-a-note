@@ -49,7 +49,7 @@
 
 				<table class="table table-hover table-striped">
 					<tr>
-						<th>N-id</th>
+						<th>N-ID</th>
 						<th>Name der Notiz</th>
 						<th>Inhalt der Notiz</th>
 						<th>Editieren der Notiz</th>
@@ -61,14 +61,9 @@
 						<td th:text="*{notizentext}">Notiz Details</td>
 
 
-						<!-- 					springt zur Seite editieren mit Berücksichtigung der jeweiligen id							 -->
 						<td><a th:href="@{'/editieren/' + ${note.notizen_id}}">editieren</a>
 
-
-
-							<a th:href="@{'/loeschen/' + ${note.notizen_id}}">löschen</a> <!-- 				        <input type="submit" th:name="edit" th:value="bearbeiten" > -->
-							<!-- 						<input type="submit" th:name="delete" th:value="löschen" > -->
-
+							<a th:href="@{'/loeschen/' + ${note.notizen_id}}">löschen</a> 
 
 						</td>
 					</tr>

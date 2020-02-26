@@ -40,37 +40,37 @@
 
 	<div id="main">
 
-		<form id="textfeld" action="#" th:action="@{/note/upsert}" method="post">
+		<form id="textfeld" action="#" th:action="@{/note/upsert}"
+			method="post">
 
 
 			<section>
 
-				<h3>Ihre neue Notes-Notiz</h3>
+				<h3>Ihre neue Notiz anlegen</h3>
 
 				<table class="table table-hover table-striped">
 					<tr>
 						<th>Name der Notiz</th>
 						<th>Inhalt der Notiz</th>
+						<th>speichern Notiz</th>
 					</tr>
+					
 
 					<tr>
 						<td><input type="text" name="notizenname" required></td>
-						
-						<td><input type="text" id="notizen_text" name="notizentext" required></td>
-						
-					</tr>
-					
-					<tr>
-					
-					
-					<output th:field="*{notizentext}" type="text" id="notizen_text" name="notizentext">
-					</output>
-					</tr>
- 					
- 					
- 				</table>
 
-				<input type="submit" value="speichern">
+						<td><input type="text" id="notizen_text" name="notizentext"
+							required></td>
+					
+						<td>
+						<input type="submit" value="speichern">
+						
+						</td>
+					
+					</tr>
+				</table>
+
+			
 
 			</section>
 
