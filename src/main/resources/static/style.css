@@ -94,9 +94,14 @@ footer  {
     display: flex;
 }
 
-.anlegen, .Listenansicht   {
-	text-decoration: underline;
+ .Anlegen, .Listenansicht, .Note_anlegen   { 
+ 
+ 	justify-content: center; 
+ 	align: center;
+ 	display: flex;
+ 	
+ 	text-decoration: underline;
 	font-size: 30px;
-	color: yellow;
+	color: #e3e378;
 		
 }
