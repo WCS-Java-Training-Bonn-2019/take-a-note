@@ -5,6 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 public class Notes {
 
@@ -22,7 +25,8 @@ public class Notes {
 //        this.notizenname = notizenname;
 //        this.notizentext = notizentext;
 //    }
-    
+
+    @JsonProperty("id")
     public Long getNotizen_id() {
   		return notizen_id;
 	}
@@ -36,7 +40,8 @@ public class Notes {
 	public void setNotizenname(String notizenname) {
 		this.notizenname = notizenname;
 	}
-    
+
+    @JsonProperty("title")
     public String getNotizenname() {
         return notizenname;
     }
@@ -45,10 +50,12 @@ public class Notes {
 		this.user_id = user_id;
 	}
 
+    @JsonIgnore
 	public Long getUser_id() {
 		return user_id;
 	}
 
+    @JsonProperty("description")
 	public String getNotizentext() {
 		return notizentext;
 	}
