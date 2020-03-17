@@ -27,6 +27,11 @@ public class NotesRestController {
 		this.repository = notesRepository;
 	}
 
+//	@GetMapping("huhu")
+//	public String huhu() {
+//		return "HUHU";
+//	}
+
 	@GetMapping("notes")
 	public List<Notes> getAll() {
 		return repository.findAll();
